@@ -5,13 +5,13 @@ public class Flag : MonoBehaviour
 {
     public string nextLevel;
 
-    // Start é chamado uma vez antes da execução do Update
+
     void Start()
     {
         
     }
 
-    // Update é chamado uma vez por frame
+  
     void Update()
     {
         

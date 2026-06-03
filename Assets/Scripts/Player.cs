@@ -21,10 +21,10 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isOnFloor)
         {
-            // Aplica a força do pulo
+           
             rb.AddForce(new Vector2(rb.linearVelocityX, jump), ForceMode2D.Impulse);
             
-            // Define como falso imediatamente para garantir que o pulo termine
+          
             isOnFloor = false;
         }
 
