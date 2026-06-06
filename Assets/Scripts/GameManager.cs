@@ -1,23 +1,53 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static int score;
-
+    public static GameManager instance;
     private TextMeshProUGUI scoreText;
 
- 
-    void Start()
+    void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        BuscaScoreText();
+    }
+
+    void BuscaScoreText()
+    {
+        GameObject obj = GameObject.Find("ScoreText");
+        if (obj != null)
+        {
+            scoreText = obj.GetComponent<TextMeshProUGUI>();
+            Debug.Log("ScoreText encontrado!");
+        }
+        else
+        {
+            Debug.LogError("ScoreText NAO encontrado!");
+        }
+    }
+
     void Update()
     {
-        scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
+       
+        if (scoreText == null)
+            BuscaScoreText();
 
-        scoreText.text = score.ToString();
+        if (scoreText != null)
+            scoreText.text = score.ToString();
     }
 }

@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Limite
+  - Ladder
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
@@ -41,6 +43,24 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3651408923
+    locked: 0
+  - name: Piranha
+    uniqueID: 2118283509
+    locked: 0
+  - name: "\xC1gua"
+    uniqueID: 489785953
+    locked: 0
+  - name: Ground
+    uniqueID: 3558158499
+    locked: 0
+  - name: Corrente
+    uniqueID: 3264697389
+    locked: 0
+  - name: Player
+    uniqueID: 3548034215
     locked: 0
   m_RenderingLayers:
   - Default
