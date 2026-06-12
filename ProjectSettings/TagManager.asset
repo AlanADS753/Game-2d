@@ -56,11 +56,17 @@ TagManager:
   - name: Ground
     uniqueID: 3558158499
     locked: 0
+  - name: Bernacle
+    uniqueID: 1035163919
+    locked: 0
   - name: Corrente
     uniqueID: 3264697389
     locked: 0
   - name: Player
     uniqueID: 3548034215
+    locked: 0
+  - name: Moita
+    uniqueID: 73161761
     locked: 0
   m_RenderingLayers:
   - Default

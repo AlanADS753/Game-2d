@@ -33,7 +33,6 @@ public class Player : MonoBehaviour
             rb.linearVelocity = new Vector2(0, climbMove * climbSpeed);
             rb.gravityScale = 0f;
 
-            
             anim.SetBool("isClimbing", climbMove != 0);
 
             if (Input.GetButtonDown("Jump"))
@@ -55,6 +54,7 @@ public class Player : MonoBehaviour
             {
                 rb.AddForce(new Vector2(rb.linearVelocityX, jump), ForceMode2D.Impulse);
                 isOnFloor = false;
+                jumpSound.Play();
             }
         }
 
